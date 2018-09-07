@@ -1,0 +1,205 @@
+/* VARIABLES */
+:root{
+    --width: 50px;
+    --height: 50px;
+    --R: 0;
+    --G: 0;
+    --B: 0;
+    --A: 1;
+    --sR: 0;
+    --sG: 0;
+    --sB: 0;
+    --sA: 1;
+    --opacity: 1;
+    --top: 0px;
+    --right: 0px;
+    --bottom: 0px;
+    --left: 0px;
+    --posX: 0px;
+    --posY: 0px;
+    --posZ: 0px;
+    --rotX: 0deg;
+    --rotY: 0deg;
+    --rotZ: 0deg;
+    --scale: 1;
+    --shadowX: 0px;
+    --shadowY: 0px;
+    --blur: 0px;
+    --spread: 0px;
+    --borderWidth: 0px;
+    --borderColor: #000000;
+    --radius: 0%;
+    --gradDeg: 0deg;
+    --gradA: #ffffff;
+    --gradB: #ffffff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat Regular";
+}
+body{
+    overflow: hidden;
+}
+/* MATERIAL DESIGN ICONS CSS */
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;  /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+  
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+  
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+  
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+.wrapper{
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: "aside main";
+}
+.wrapper aside{
+    grid-area: aside;
+    height: 631px;
+    overflow-y: scroll;
+    border-right: 5px solid #55555520;
+    box-shadow: 3px 0px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.wrapper main{
+    grid-area: main;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(var(--gradDeg), var(--gradA), var(--gradB));
+}
+.wrapper main .box_container{
+    overflow:hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.wrapper main .box_container .box{
+    width: var(--width);
+    height: var(--height);
+    background-color:rgba(var(--R), var(--G), var(--B), var(--A));
+    opacity: var(--opacity);
+    margin: var(--top) var(--right) var(--bottom) var(--left);
+    transform:perspective(500px) translateX(var(--posX)) translateY(var(--posY)) translateZ(var(--posZ)) rotateX(var(--rotX)) rotateY(var(--rotY)) rotateZ(var(--rotZ)) scale(var(--scale));
+    box-shadow: var(--shadowX) var(--shadowY) var(--blur) var(--spread) rgba(var(--sR), var(--sG), var(--sB), var(--sA));
+    border: var(--borderWidth) solid var(--borderColor);
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #f5f5f5;
+    font-family: "Montserrat Medium";
+    font-size: 14px;
+}
+.box_basics{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 5px;
+}
+.properties{
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 5px;
+}
+.toggleMenu{
+    display: flex;
+}
+.properties > * {
+    margin: 5px 0;
+}
+p{
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-family: "Montserrat SemiBold";
+}
+#addBox{
+    width: 35px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    background-color: #2979FF;
+    color: #fff;
+    font-family: "Montserrat SemiBold";
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}
+#title{
+    text-align: center;
+    font-family: "Paytone One";
+    font-size: 40px;
+    color: #2979FF;
+}
+h3{
+    font-family: "Montserrat Regular";
+    font-size: 18px;
+    text-align: left;
+    margin: 15px 0px 10px 5px;
+    display: flex;
+    cursor: pointer;
+    color: #555;
+}
+h5{
+    font-family: "Montserrat Medium";
+    color: #444;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #2979FF;
+    border-radius: 1px;
+}
+.colorSwatch{
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.colorSwatch::-webkit-color-swatch-wrapper {
+    padding: 0;	
+}
+.colorSwatch::-webkit-color-swatch {
+    border: none;
+    border-radius: 100%;
+}
+  
+  
+  
+  

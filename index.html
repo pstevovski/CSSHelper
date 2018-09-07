@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSSHelper</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Aside column -->
+        <aside>
+            <h2 id="title">CSS Helper</h2>
+            <!-- Add new boxes -->
+            <p>Add box <button id="addBox">+</button></p>
+            <!-- Box width, height, color -->
+            <h3 class="menuTitle" id="boxBasic">Main <span><i class="material-icons" id="boxBasic" >expand_more</i></span></h3>
+            <div class="box_basics properties" id="boxBasic">
+                <!-- BOX WIDTH -->
+                <label for="boxWidth">Width: <span class="info" id="width">50px</span></label>
+                <input type="range" name="width" id="boxWidth" min="1" max="500" value="50" step="1" data-sizing="px" data-name="width">
+
+                <!-- BOX HEIGHT -->
+                <label for="boxHeight">Height: <span class="info" id="height">50px</span></label>
+                <input type="range" name="height" id="boxHeight" min="1" max="500" value="50" step="1" data-sizing="px" data-name="height">
+
+                <!-- BOX COLOR -->
+                <label for="boxColorR">R: <span class="info" id="R">0</span></label>
+                <input type="range" name="R" id="boxColorR" min="0" max="255" value="0">
+                <label for="boxColorG">G: <span class="info" id="G">0</span></label>
+                <input type="range" name="G" id="boxColorG" min="0" max="255" value="0">
+                <label for="boxColorB">B: <span class="info" id="B">0</span></label>
+                <input type="range" name="B" id="boxColorB" min="0" max="255" value="0">
+
+            </div>
+
+            <!-- OPACITY -->
+            <h3 class="menuTitle" id="opacity">Opacity <span><i class="material-icons" id="opacity" >expand_more</i></span></h3>
+            <div class="box_opacity properties" id="opacity">
+                <label for="boxOpacity">Opacity: <span class="info" id="opacity">1</span></label>
+                <input type="range" name="opacity" id="boxOpacity" min="0" max="1" step="0.01" value="1" data-name="opacity">
+            </div>
+
+            <!-- BOX MARGINS -->
+            <h3 class="menuTitle" id="margins">Margins <span><i class="material-icons" id="margins" >expand_more</i></span></h3>
+            <div class="box_margins properties" id="margins">
+                <!-- MARGIN TOP -->
+                <label for="marginTop">Margin-top: <span class="info" id="top">0px</span></label>
+                <input type="range" name="top" id="marginTop" min="0" max="100" value="0" step="1" data-sizing="px" data-name="margin-top">
+                
+                <!-- MARGIN RIGHT -->
+                <label for="marginRight">Margin-right: <span class="info" id="right">0px</span></label>
+                <input type="range" name="right" min="0" max="100" value="0" step="1" data-sizing="px" data-name="margin-right">
+
+                <!-- MARGIN BOTTOM -->
+                <label for="marginBottom">Margin-bottom: <span class="info" id="bottom">0px</span></label>
+                <input type="range" name="bottom" id="marginBottom" min="0" max="100" value="0" step="1" data-sizing="px" data-name="margin-bottom">
+
+                <!-- MARGIN LEFT -->
+                <label for="marginLeft">Margin-left: <span class="info" id="left">0px</span></label>
+                <input type="range" name="left" id="marginLeft" min="0" max="100" value="0" step="1" data-sizing="px" data-name="margin-left">
+            </div>
+
+            <!-- BOX TRANSFORM -->
+            <h3 class="menuTitle" id="transform">Transform <span><i class="material-icons" id="transform" >expand_more</i></span></h3>
+            <div class="box_transform properties" id="transform">
+                <!-- POSITION TRANSFORM -->
+                <h5>POSITION TRANSFORM:</h5>
+                <!-- TRANSLATE X -->
+                <label for="translateX">Translate X: <span class="info" id="posX">0px</span></label>
+                <input type="range" name="posX" id="translateX" min="-500" max="500" value="0" data-sizing="px" data-transform="transform: translateX">
+
+                <!-- TRANSLATE Y -->
+                <label for="translateY">Translate Y: <span class="info" id="posY">0px</span></label>
+                <input type="range" name="posY" id="translateY" min="-500" max="500" value="0" data-sizing="px" data-transform="transform: translateY">
+
+                <!-- TRANSLATE Z -->
+                <label for="translateZ">Translate Z: <span class="info" id="posZ">0px</span></label>
+                <input type="range" name="posZ" id="translateZ" min="-500" max="500" value="0" data-sizing="px" data-transform="transform: translateZ">
+
+                <!-- ROTATION TRANSFORM -->
+                <h5>ROTATION TRANSFORM:</h5>
+                <!-- ROTATE X -->
+                <label for="rotateX">Rotate X: <span class="info" id="rotX">0deg</span></label>
+                <input type="range" name="rotX" id="rotateX" min="0" max="360" value="0" data-sizing="deg" data-transform="transform: rotateX">
+
+                <!-- ROTATE Y -->
+                <label for="rotateY">Rotate Y: <span class="info" id="rotY">0deg</span></label>
+                <input type="range" name="rotY" id="rotateY" min="0" max="360" value="0" data-sizing="deg" data-transform="transform: rotateY">
+
+                <!-- ROTATE Z -->
+                <label for="rotateZ">Rotate Z: <span class="info" id="rotZ">0deg</span></label>
+                <input type="range" name="rotZ" id="rotateZ" min="0" max="360" value="0" data-sizing="deg" step="1" data-transform="transform: rotateZ">
+
+                <!-- SCALE TRANSFORM -->
+                <h5>SCALE TRANSFORM:</h5>
+                <label for="boxScale">Scale: <span class="info" id="scale">1</span></label>
+                <input type="range" name="scale" id="boxScale" min="0" max="10" step="0.01" value="1" data-transform="scale">
+            </div>
+
+            <!-- BOX BORDER -->
+            <h3 class="menuTitle" id="borders">Border <span><i class="material-icons" id="shadows" >expand_more</i></span></h3>
+            <div class="box_border properties" id="borders">
+                <!-- Border radius -->
+                <label for="borderRadius">Radius: <span class="info" id="radius">0%</span></label>
+                <input type="range" name="radius" id="borderRadius" min="0" max="100" value="0" data-sizing="%" data-name="border-radius">
+                <label for="borderW">Width: <span class="info" id="borderWidth">0px</span></label>
+                <input type="range" name="borderWidth" id="borderW" min="0" max="50" value="0" data-sizing="px" data-name="border-width">
+                <label for="borderC">Color: <span class="info" id="borderColor">#000000</span></label>
+                <input type="color" name="borderColor" id="borderC" class="colorSwatch" data-name="border-color">
+            </div>
+
+            <!-- BOX SHADOWS -->
+            <h3 class="menuTitle" id="shadows">Shadows <span><i class="material-icons" id="shadows" >expand_more</i></span></h3>
+            <div class="box_shadows properties" id="shadows">
+                <!-- SHADOW X -->
+                <label for="boxShadowX">Shadow X: <span class="info" id="shadowX">0px</span></label>
+                <input type="range" name="shadowX" id="boxShadowX" min="0" max="50" value="0" data-sizing="px">
+
+                <!-- SHADOW Y -->
+                <label for="boxShadowY">Shadow Y: <span class="info" id="shadowY">0px</span></label>
+                <input type="range" name="shadowY" id="boxShadowY" min="0" max="50" value="0" data-sizing="px">
+
+                <!-- SHADOW BLUR -->
+                <label for="shadowBlur">Blur: <span class="info" id="blur">0px</span></label>
+                <input type="range" name="blur" id="shadowBlur" min="0" max="50" value="0" data-sizing="px">
+
+                <!-- SHADOW SPREAD -->
+                <label for="shadowSpread">Spread: <span class="info" id="spread">0px</span></label>
+                <input type="range" name="spread" id="shadowSpread" min="0" max="50" value="0" data-sizing="px">
+
+                <!-- SHADOW COLOR -->
+                <label for="shadowR">R: <span class="info" id="sR">0</span></label>
+                <input type="range" name="sR" id="shadowR" min="0" max="255" value="0">
+                <label for="shadowG">G: <span class="info" id="sG">0</span></label>
+                <input type="range" name="sG" id="shadowG" min="0" max="255" value="0">
+                <label for="shadowB">B: <span class="info" id="sB">0</span></label>
+                <input type="range" name="sB" id="shadowB" min="0" max="255" value="0">
+                <label for="shadowA">A: <span class="info" id="sA">1</span></label>
+                <input type="range" name="sA" id="shadowA" min="0" max="1" step="0.01" value="1">
+            </div>
+            <!-- GRADIENT -->
+            <h3 class="menuTitle" id="gradient">Gradient <span><i class="material-icons" id="gradient" >expand_more</i></span></h3>
+            <div class="gradient properties" id="gradient">
+                <label for="gradientDeg">Gradient Angle: <span class="info" id="gradDeg">0deg</span></label>
+                <input type="range" name="gradDeg" id="gradientDeg" value="0" min="0" max="360" data-sizing="deg">
+                <label for="gradColorA">Color A: <span class="info" id="gradA">#2979FF</span></label>
+                <input type="color" name="gradA" id="gradColorA" class="colorSwatch" value="#2979FF">
+                <label for="gradColorB">Color B: <span class="info" id="gradB">#e1302a</span></label>
+                <input type="color" name="gradB" id="gradColorB" class="colorSwatch" value="#e1302a">
+            </div>
+
+            <!-- CODE BOX -->
+            <!-- <div class="codeBox">
+                .box {
+                    <ul class="codeHere"></ul>
+            </div> -->
+        </aside>
+
+        <!-- Main -->
+        <main>
+            <div class="box_container">
+                
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
