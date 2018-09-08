@@ -8,7 +8,6 @@ addBox.addEventListener("click", ()=>{
     boxNumber++;
     newBox.textContent = `BOX ${boxNumber}`;
     boxContainer.appendChild(newBox);
-    console.log("Test")
 })
 
 // Get all the inputs
@@ -34,9 +33,8 @@ function updateCSS(){
 // Display / hide menues.
 const menuTitle = document.querySelectorAll(".menuTitle");
 const menu = document.querySelectorAll(".properties");
-const open = document.querySelector(".open");
-const icons = document.querySelectorAll(".wrapper h3 span i");
 
+let isClicked = false;
 function toggleMenu(){
     menu.forEach(menu => {
         if(this.id === menu.id) {
