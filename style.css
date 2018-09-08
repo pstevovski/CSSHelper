@@ -84,6 +84,12 @@ body{
     border-right: 5px solid #55555520;
     box-shadow: 3px 0px 15px rgba(0,0,0,0.1);
     text-align: center;
+    position: relative;
+}
+.wrapper aside .github{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
 }
 .wrapper main{
     grid-area: main;
@@ -295,9 +301,26 @@ input[type=range] {
   input[type=range]:focus::-ms-fill-upper {
     background: #4389ff;
   }
-  
-  
-  
+  .notification{
+      text-align: center;
+      display: none;
+      padding: 25px;
+  }
+  .notification h1{
+      font-size: 35px;
+      font-family: "Montserrat Medium";
+  }
+  .notification p {
+      font-family: "Montserrat Regular";
+  }
+  @media (max-width: 600px) {
+      .wrapper{
+          display: none;
+      }
+      .notification {
+          display: block;
+      }
+  }
   
   
   
