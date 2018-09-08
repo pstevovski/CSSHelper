@@ -16,28 +16,9 @@ const inputs = document.querySelectorAll(`.wrapper input[type="range"]`);
 const colorPicker = document.querySelectorAll(`.wrapper input[type=color]`);
 let isDown = false;
 inputs.forEach(input => input.addEventListener("change", updateCSS));
-// inputs.forEach(input => input.addEventListener("change", showCode));
 inputs.forEach(input => input.addEventListener("mousemove", updateCSS));
 colorPicker.forEach(color => color.addEventListener("change", updateCSS));
 const info = document.querySelectorAll(".info");
-// let  codeHere = document.querySelector(".codeHere");
-
-// function showCode(){
-//     const suffix = this.dataset.sizing || "";
-//     if(this.dataset.name){
-//     codeHere.innerHTML = `
-//         <li>
-//             ${this.dataset.name} : ${this.value + suffix};}
-//         </li>
-//     `}
-//     else if (this.dataset.transform) {
-//         codeHere.innerHTML = `
-//             <li>
-//                 ${this.dataset.transform}(${this.value + suffix});}
-//             </li>
-//         `
-//     }
-// }
 
 function updateCSS(){
     // If theres a data-set SIZING, use that as suffix, otherwise empty.
@@ -53,6 +34,7 @@ function updateCSS(){
 // Display / hide menues.
 const menuTitle = document.querySelectorAll(".menuTitle");
 const menu = document.querySelectorAll(".properties");
+const open = document.querySelector(".open");
 const icons = document.querySelectorAll(".wrapper h3 span i");
 
 function toggleMenu(){
@@ -62,5 +44,4 @@ function toggleMenu(){
         }
     })
 }
-
 menuTitle.forEach(menuTitle => menuTitle.addEventListener("click", toggleMenu))
