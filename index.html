@@ -15,8 +15,11 @@
             <h2 id="title">CSS Helper</h2>
             <!-- Add new boxes -->
             <p>Add box <button id="addBox">+</button></p>
+            <div class="github">
+                    <a href="https://github.com/pecko95/CSSHelper/"><img src="github.svg" width="25px" height="25px" alt="Github link"></a>
+            </div>
             <!-- Box width, height, color -->
-            <h3 class="menuTitle" id="boxBasic">Main <span><i class="material-icons" id="boxBasic" >expand_more</i></span></h3>
+            <h3 class="menuTitle" id="boxBasic">Main <span class="about" id="boxBasic"><i class="material-icons">info</i></span></h3>
             <div class="box_basics properties" id="boxBasic">
                 <!-- BOX WIDTH -->
                 <label for="boxWidth">Width: <span class="info" id="width">50px</span></label>
@@ -34,17 +37,25 @@
                 <label for="boxColorB">B: <span class="info" id="B">0</span></label>
                 <input type="range" name="B" id="boxColorB" min="0" max="255" value="0">
 
+                <!-- BOX GRADIENT -->
+                <h5>Gradient background: </h5>
+                <label for="boxGradient">Gradient Angle: <span class="info" id="boxGrad">0deg</span></label>
+                <input type="range" name="boxGrad" id="boxGradient" value="0" min="0" max="360" data-sizing="deg">
+                <label for="boxGradA">Color A: <span class="info" id="boxA">#2979FF</span></label>
+                <input type="color" name="boxA" id="boxGradA" class="colorSwatch" value="#2979FF">
+                <label for="boxGradB">Color B: <span class="info" id="boxB">#e1302a</span></label>
+                <input type="color" name="boxB" id="boxGradB" class="colorSwatch" value="#e1302a">
             </div>
 
             <!-- OPACITY -->
-            <h3 class="menuTitle" id="opacity">Opacity <span><i class="material-icons" id="opacity" >expand_more</i></span></h3>
+            <h3 class="menuTitle" id="opacity">Opacity <span class="about" id="opacity"><i class="material-icons">info</i></span></h3>
             <div class="box_opacity properties" id="opacity">
                 <label for="boxOpacity">Opacity: <span class="info" id="opacity">1</span></label>
                 <input type="range" name="opacity" id="boxOpacity" min="0" max="1" step="0.01" value="1" data-name="opacity">
             </div>
 
             <!-- PADDING -->
-            <h3 class="menuTitle" id="padding">Padding <span><i class="material-icons" id="padding">expand_more</i></span></h3>
+            <h3 class="menuTitle" id="padding">Padding <span class="about" id="padding"><i class="material-icons">info</i></span></h3>
             <div class="box_padding properties" id="padding">
                 <!-- PADDING TOP -->
                 <label for="paddingTop">Padding-top: <span class="info" id="padTop">0px</span></label>
@@ -60,7 +71,7 @@
                 <input type="range" name="padLeft" id="paddingLeft" value="0" min="0" max="100" data-sizing="px">
             </div>
             <!-- BOX MARGINS -->
-            <h3 class="menuTitle" id="margins">Margins <span><i class="material-icons" id="margins" >expand_more</i></span></h3>
+            <h3 class="menuTitle" id="margins">Margins <span class="about" id="margins"><i class="material-icons">info</i></span></h3>
             <div class="box_margins properties" id="margins">
                 <!-- MARGIN TOP -->
                 <label for="marginTop">Margin-top: <span class="info" id="top">0px</span></label>
@@ -80,7 +91,7 @@
             </div>
 
             <!-- BOX TRANSFORM -->
-            <h3 class="menuTitle" id="transform">Transform <span><i class="material-icons" id="transform" >expand_more</i></span></h3>
+            <h3 class="menuTitle" id="transform">Transform <span class="about" id="transform"><i class="material-icons">info</i></span></h3>
             <div class="box_transform properties" id="transform">
                 <!-- POSITION TRANSFORM -->
                 <h5>POSITION TRANSFORM:</h5>
@@ -117,7 +128,7 @@
             </div>
 
             <!-- BOX BORDER -->
-            <h3 class="menuTitle" id="borders">Border <span><i class="material-icons" id="shadows" >expand_more</i></span></h3>
+            <h3 class="menuTitle" id="borders">Border <span class="about" id="borders"><i class="material-icons">info</i></span></h3>
             <div class="box_border properties" id="borders">
                 <!-- Border radius -->
                 <label for="borderRadius">Radius: <span class="info" id="radius">0%</span></label>
@@ -129,7 +140,7 @@
             </div>
 
             <!-- BOX SHADOWS -->
-            <h3 class="menuTitle" id="shadows">Shadows <span><i class="material-icons" id="shadows" >expand_more</i></span></h3>
+            <h3 class="menuTitle" id="shadows">Shadows <span class="about" id="shadows"><i class="material-icons">info</i></span></h3>
             <div class="box_shadows properties" id="shadows">
                 <!-- SHADOW X -->
                 <label for="boxShadowX">Shadow X: <span class="info" id="shadowX">0px</span></label>
@@ -157,8 +168,8 @@
                 <label for="shadowA">A: <span class="info" id="sA">1</span></label>
                 <input type="range" name="sA" id="shadowA" min="0" max="1" step="0.01" value="1">
             </div>
-            <!-- GRADIENT -->
-            <h3 class="menuTitle" id="gradient">Gradient <span><i class="material-icons" id="gradient" >expand_more</i></span></h3>
+            <!-- BACKGROUND GRADIENT -->
+            <h3 class="menuTitle" id="gradient">Background Gradient <span class="about" id="gradient"><i class="material-icons">info</i></span></h3>
             <div class="gradient properties" id="gradient">
                 <label for="gradientDeg">Gradient Angle: <span class="info" id="gradDeg">0deg</span></label>
                 <input type="range" name="gradDeg" id="gradientDeg" value="0" min="0" max="360" data-sizing="deg">
@@ -167,12 +178,8 @@
                 <label for="gradColorB">Color B: <span class="info" id="gradB">#e1302a</span></label>
                 <input type="color" name="gradB" id="gradColorB" class="colorSwatch" value="#e1302a">
             </div>
-
-            <div class="github">
-                <a href="https://github.com/pecko95/CSSHelper/"><img src="github.svg" width="30px" height="30px" alt="Github link"></a>
-            </div>
         </aside>
-
+        
         <!-- Main -->
         <main>
             <div class="box_container">
@@ -183,10 +190,12 @@
 
     <!-- Notification for small screens -->
     <div class="notification">
-        <h1>Sorry..</h1>
+        <h1>SORRY..</h1>
         <p>This project was designed to work on tablets and bigger screens. If you are opening this from a smaller screen like a mobile phone, please open it on a computer or tablet. Thank your for your understanding.</p>
     </div>
 
+    <!-- Modal box containing information about the properties. -->
+    <div class="modal"></div>
     <script src="main.js"></script>
 </body>
 </html>
