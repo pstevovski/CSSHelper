@@ -284,7 +284,7 @@ input[type=range] {
     height: 20px;
     width: 20px;
     border-radius: 20px;
-    background: #eeeeee;
+    background: #fff;
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -5px;
@@ -296,7 +296,7 @@ input[type=range] {
     width: 100%;
     height: 10px;
     cursor: pointer;
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2), 0px 0px 2px rgba(13, 13, 13, 0.2);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
     background: #2979ff;
     border-radius: 25px;
     border: 0px solid #000101;
