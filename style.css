@@ -36,6 +36,9 @@
     --gradDeg: 0deg;
     --gradA: #ffffff;
     --gradB: #ffffff;
+    --boxGrad: 0deg;
+    --boxA: none;
+    --boxB: none;
 }
 *{
     margin: 0;
@@ -44,7 +47,7 @@
     font-family: "Montserrat Regular";
 }
 body{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 /* MATERIAL DESIGN ICONS CSS */
 .material-icons {
@@ -76,10 +79,11 @@ body{
     overflow: hidden;
     grid-template-columns: 300px 1fr;
     grid-template-areas: "aside main";
+    position: relative;
 }
 .wrapper aside{
     grid-area: aside;
-    height: 631px;
+    min-height: 631px;
     overflow-y: scroll;
     border-right: 5px solid #55555520;
     box-shadow: 3px 0px 15px rgba(0,0,0,0.1);
@@ -88,12 +92,12 @@ body{
 }
 .wrapper aside .github{
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    top: 20px;
+    left: 260px;
 }
 .wrapper main{
     grid-area: main;
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,6 +117,7 @@ body{
     width: var(--width);
     height: var(--height);
     padding: var(--padTop) var(--padRight) var(--padBottom) var(--padLeft);
+    background-image: linear-gradient(var(--boxGrad), var(--boxA), var(--boxB));
     background-color:rgba(var(--R), var(--G), var(--B), var(--A));
     opacity: var(--opacity);
     margin: var(--top) var(--right) var(--bottom) var(--left);
@@ -141,12 +146,52 @@ body{
     align-items: flex-start;
     justify-content: center;
     margin-left: 5px;
+    transform: translateX(-350px);
+    transition: all 2s ease;
 }
+.menuTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.15s ease;
+}
+.menuTitle:hover{
+    background-color: #2979FF;
+    color: #fff;
+    padding: 5px;
+}
+.menuTitle i {
+    font-size: 30px;
+}
+
 .toggleMenu{
     display: flex;
+    background-color: #dddddd30;
+    padding: 10px;
+    transition: all 0.15s ease;
+    animation: toggleMenu 0.5s ease forwards;
+}
+@keyframes toggleMenu{
+    0%{
+        transform: translateX(-350px)
+    }
+    100%{
+        transform: translateX(0px);
+    }
 }
 .open{
     display: flex;
+}
+.activeMenu{
+    background-color: #2979FF;
+    color: #f5f5f5;
+    padding: 5px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-indent: 10px;
+    transition: all 0.15s ease;
 }
 .toggleOpen{
     display: none;
@@ -154,7 +199,7 @@ body{
 .properties > * {
     margin: 5px 0;
 }
-p{
+.properties p{
     margin-top: 10px;
     text-transform: uppercase;
     font-family: "Montserrat SemiBold";
@@ -313,12 +358,66 @@ input[type=range] {
   .notification p {
       font-family: "Montserrat Regular";
   }
+  .modal {
+      display: none;
+  }
+  .modalActive {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 10px;
+      background-color: #fff;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+      position: absolute;
+      top: 50%;
+      left: 65%;
+      transform: translate(-65%, -50%);
+      width: auto;
+      min-height: 60px;
+  }
+  .modal h3{
+      font-family: "Paytone One";
+      color: #2979ff;
+      letter-spacing: 1px;
+      font-size: 25px;
+      margin-top: 0px;
+  }
+  .modal p{
+      font-family: "Montserrat Regular";
+      margin: 10px 0;
+      color: #888;
+  }
+  .modal a{
+      text-decoration: none;
+      color: #2979FF;
+      font-size: 14px;
+      font-family: "Montserrat Medium";
+  }
+  .closeBtn{
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      cursor: pointer;
+      transition: 0.15s ease;
+  }
+  .closeBtn i{
+      font-size: 30px;
+  }
+  .closeBtn:hover{
+      color: #e1302a;
+  }
   @media (max-width: 600px) {
       .wrapper{
           display: none;
       }
       .notification {
           display: block;
+      }
+      .notification h1 {
+          font-family: "Montserrat Black";
+          font-size:40px;
       }
   }
   
