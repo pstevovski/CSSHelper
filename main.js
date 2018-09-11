@@ -13,7 +13,7 @@ addBox.addEventListener("click", ()=>{
 // Get all the inputs
 const inputs = document.querySelectorAll(`.wrapper input[type="range"]`);
 const colorPicker = document.querySelectorAll(`.wrapper input[type=color]`);
-let isDown = false;
+
 inputs.forEach(input => input.addEventListener("change", updateCSS));
 inputs.forEach(input => input.addEventListener("mousemove", updateCSS));
 colorPicker.forEach(color => color.addEventListener("change", updateCSS));
